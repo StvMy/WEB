@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="asset/bootstrap4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="asset/swal2/sweetalert2.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.mt20{
+			margin-top:20px;
+			margin-bottom:20px;
+			color:rgb(0, 0, 0);
+		}
+		table{
+			border-radius: 2% 2% 2% 2%;
+			box-shadow: 5px 5px 8px 8px #d6d4d4;
+		}
+		.topnav{
+			text-align: center;
+			margin: 20px;
+		}
+		/* Style the search box inside the navigation bar */
+		.topnav input[type=text] {
+		
+		padding: 6px;
+		border: none;
+		margin-top: 8px;
+		margin-right: 16px;
+		font-size: 17px;
+		}
+
+		/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+		@media screen and (max-width: 600px) {
+			.topnav a, .topnav input[type=text] {
+				float: none;
+				display: block;
+				text-align: left;
+				width: 100%;
+				margin: 0;
+				padding: 14px;
+			}
+			.topnav input[type=text] {
+				border: 1px solid #ccc;
+			}
+		}
+
+		.topnav .search-container button {
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			cursor: pointer;
+		}
+
+		.topnav .search-container button:hover {
+			background: #ccc;
+		}
+	</style>
+</head>
+<body> 
+<div class="container">
+	<h1 class="text-center mt20">Data Products</h1>
+	<div class="topnav">
+		<div class="search-container">
+			<form method="POST" action="fetch-del_prod.php?action=search">
+			  <input type="text" placeholder="Search.." name="find">
+			  <button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<table class="table table-hover">
+				<thead style="border: 0px">
+					<th>Kode</th>
+					<th>Nama Produk</th>
+					<th>Jumlah Stok</th>
+					<th>Harga</th>
+					<th>Action</th>
+				</thead>
+				<tbody id="tbody">
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+ 
+<script src="asset/jquery.min.js"></script>
+<script src="asset/bootstrap4/js/bootstrap.min.js"></script>
+<script src="asset/swal2/sweetalert2.min.js"></script>
+<script src="app copy.js"></script>
+</body>
+</html>
